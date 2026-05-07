@@ -12,7 +12,7 @@ export default function App() {
       name: "Asgar Classic Polycarbonate (Cabin)",
       material: "Premium Aerospace PC",
       moq: "Min. Order: 50 Pcs",
-      image: "/img1.jpg",
+      image: "/bag1.jpg",
       tag: "High Demand"
     },
     {
@@ -20,7 +20,7 @@ export default function App() {
       name: "Asgaro Softside Canvas (Medium)",
       material: "High-Density Canvas Blend",
       moq: "Min. Order: 50 Pcs",
-      image: "/img4.jpg",
+      image: "/bag2.jpg",
       tag: "OEM Available"
     },
     {
@@ -28,7 +28,7 @@ export default function App() {
       name: "Asgaro Voyager Trolley (Large)",
       material: "ABS + PC Blend",
       moq: "Min. Order: 25 Pcs",
-      image: "/img2.jpg",
+      image: "/img1.jpg",
       tag: "Premium Quality"
     }
   ];
@@ -138,9 +138,9 @@ export default function App() {
             >
               <div className="absolute inset-0 bg-gradient-to-tr from-amber-100 to-slate-100 rounded-[3rem] transform rotate-3 scale-105 -z-10"></div>
               <img 
-                src="/img3.jpg" 
+                src="/bag1.jpg" 
                 alt="Premium Asgaro Trolley Bag Manufacturing" 
-                className="rounded-[3rem] object-contain p-8 h-[500px] w-full shadow-2xl bg-white"
+                className="rounded-[3rem] object-contain p-6 h-[500px] w-full shadow-2xl bg-white scale-100 hover:scale-105 transition-transform duration-700 ease-out"
                 referrerPolicy="no-referrer"
               />
               
@@ -221,16 +221,16 @@ export default function App() {
                 whileHover={{ y: -10 }}
                 className="bg-white rounded-[2rem] overflow-hidden border border-slate-100 shadow-sm hover:shadow-xl transition-all group flex flex-col"
               >
-                <div className="relative h-80 overflow-hidden bg-slate-100 p-6 flex justify-center items-center">
+                <div className="relative h-96 overflow-hidden bg-white p-4 flex justify-center items-center">
                   <div className="absolute top-4 left-4 z-10">
-                    <span className="bg-white/90 backdrop-blur-sm text-slate-900 text-xs font-bold px-3 py-1.5 rounded-full shadow-sm">
+                    <span className="bg-white/90 backdrop-blur-sm text-slate-900 text-xs font-bold px-3 py-1.5 rounded-full shadow-sm border border-slate-100">
                       {product.tag}
                     </span>
                   </div>
                   <img 
                     src={product.image} 
                     alt={product.name}
-                    className="h-full w-full object-contain p-4 drop-shadow-xl group-hover:scale-105 transition-transform duration-500"
+                    className="h-full w-full object-contain p-2 scale-[1.15] group-hover:scale-[1.25] transition-transform duration-700 ease-out drop-shadow-xl"
                     referrerPolicy="no-referrer"
                   />
                 </div>
@@ -268,9 +268,9 @@ export default function App() {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
               <img 
-                src="/img5.jpg" 
+                src="/img1.jpg" 
                 alt="Travel Lifestyle" 
-                className="rounded-[3rem] p-8 object-contain h-[400px] w-full bg-white shadow-2xl"
+                className="rounded-[3rem] p-6 object-contain h-[450px] w-full bg-white shadow-2xl scale-100"
                 referrerPolicy="no-referrer"
               />
             </div>

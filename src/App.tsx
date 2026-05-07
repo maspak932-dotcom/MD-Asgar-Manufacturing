@@ -9,26 +9,26 @@ export default function App() {
   const products = [
     {
       id: 1,
-      name: "The Asgar Classic (Cabin)",
-      material: "ABS + PC Blend",
+      name: "Asgar Classic Polycarbonate (Cabin)",
+      material: "Premium Aerospace PC",
       moq: "Min. Order: 50 Pcs",
-      image: "https://images.unsplash.com/photo-1581553680321-4fffae59f5b2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "/img1.jpg",
       tag: "High Demand"
     },
     {
       id: 2,
-      name: "Asgaro Pro Polycarbonate (Medium)",
-      material: "100% Polycarbonate",
+      name: "Asgaro Softside Canvas (Medium)",
+      material: "High-Density Canvas Blend",
       moq: "Min. Order: 50 Pcs",
-      image: "https://images.unsplash.com/photo-1565026057447-bc90a3dceeee?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "/img4.jpg",
       tag: "OEM Available"
     },
     {
       id: 3,
-      name: "Asgaro Titan Elite (Large)",
-      material: "Premium Aerospace PC",
+      name: "Asgaro Voyager Trolley (Large)",
+      material: "ABS + PC Blend",
       moq: "Min. Order: 25 Pcs",
-      image: "https://images.unsplash.com/photo-1622560480654-d96214fdc887?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "/img2.jpg",
       tag: "Premium Quality"
     }
   ];
@@ -138,9 +138,9 @@ export default function App() {
             >
               <div className="absolute inset-0 bg-gradient-to-tr from-amber-100 to-slate-100 rounded-[3rem] transform rotate-3 scale-105 -z-10"></div>
               <img 
-                src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+                src="/img3.jpg" 
                 alt="Premium Asgaro Trolley Bag Manufacturing" 
-                className="rounded-[3rem] object-cover h-[500px] w-full shadow-2xl"
+                className="rounded-[3rem] object-cover h-[500px] w-full shadow-2xl bg-white"
                 referrerPolicy="no-referrer"
               />
               
@@ -180,8 +180,8 @@ export default function App() {
               },
               {
                 icon: <Wind className="w-8 h-8 text-amber-600" />,
-                title: "Premium Materials",
-                desc: "Sourcing only top-tier aerospace-grade polycarbonates and superior fabric blends."
+                title: "Premium Fabrics",
+                desc: "Sourcing only top-tier water-resistant nylons and superior canvas blends for durable softside bags."
               },
               {
                 icon: <PackageOpen className="w-8 h-8 text-amber-600" />,
@@ -268,9 +268,9 @@ export default function App() {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
               <img 
-                src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+                src="/img5.jpg" 
                 alt="Travel Lifestyle" 
-                className="rounded-[3rem] object-cover h-[400px] w-full border border-slate-700"
+                className="rounded-[3rem] object-cover h-[400px] w-full border border-slate-700 bg-slate-800"
                 referrerPolicy="no-referrer"
               />
             </div>

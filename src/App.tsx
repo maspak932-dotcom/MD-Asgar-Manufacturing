@@ -140,7 +140,7 @@ export default function App() {
               <img 
                 src="/img3.jpg" 
                 alt="Premium Asgaro Trolley Bag Manufacturing" 
-                className="rounded-[3rem] object-cover h-[500px] w-full shadow-2xl bg-white"
+                className="rounded-[3rem] object-contain p-8 h-[500px] w-full shadow-2xl bg-white"
                 referrerPolicy="no-referrer"
               />
               
@@ -230,7 +230,7 @@ export default function App() {
                   <img 
                     src={product.image} 
                     alt={product.name}
-                    className="h-full w-full object-cover rounded-xl group-hover:scale-105 transition-transform duration-500"
+                    className="h-full w-full object-contain p-4 drop-shadow-xl group-hover:scale-105 transition-transform duration-500"
                     referrerPolicy="no-referrer"
                   />
                 </div>
@@ -270,7 +270,7 @@ export default function App() {
               <img 
                 src="/img5.jpg" 
                 alt="Travel Lifestyle" 
-                className="rounded-[3rem] object-cover h-[400px] w-full border border-slate-700 bg-slate-800"
+                className="rounded-[3rem] p-8 object-contain h-[400px] w-full bg-white shadow-2xl"
                 referrerPolicy="no-referrer"
               />
             </div>

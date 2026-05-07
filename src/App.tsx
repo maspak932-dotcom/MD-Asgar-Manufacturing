@@ -5,377 +5,162 @@ import { Menu, ArrowRight, ShieldCheck, Wind, Lock, Star, Check, X, MessageCircl
 export default function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  // Products Data
+  // Saari premium photos ke links yahan perfect sequence mein hain
   const products = [
     {
       id: 1,
-      name: "Asgar Classic Polycarbonate (Cabin)",
-      material: "Premium Aerospace PC",
+      name: "Asgar Red Executive",
+      material: "Heavy-Duty Polyester",
       moq: "Min. Order: 50 Pcs",
-      image: "/bag1.jpg",
-      tag: "High Demand"
+      image: "/file_000000007cdc7208bf2995f04e6521f1.png", // Red Bag Airport
+      tag: "Best Seller"
     },
     {
       id: 2,
-      name: "Asgaro Softside Canvas (Medium)",
-      material: "High-Density Canvas Blend",
+      name: "Asgaro Premium Series",
+      material: "High-Density Canvas",
       moq: "Min. Order: 50 Pcs",
-      image: "/bag2.jpg",
-      tag: "OEM Available"
+      image: "/file_00000000bab8720bb04e2a6ed7e534f9.png", // 6 Colors Grid
+      tag: "Wholesale Choice"
     },
     {
       id: 3,
-      name: "Asgaro Voyager Trolley (Large)",
-      material: "ABS + PC Blend",
+      name: "Asgaro VIP Purple",
+      material: "Premium Aerospace Blend",
       moq: "Min. Order: 25 Pcs",
-      image: "/img1.jpg",
-      tag: "Premium Quality"
+      image: "/file_00000000cc3072089dd33b05cc0c6e10.png", // New Hotel Entrance Photo
+      tag: "Luxury Range"
     }
   ];
 
   return (
-    <div className="min-h-screen bg-slate-50 font-sans text-slate-900 overflow-x-hidden">
-      {/* Navigation */}
-      <nav className="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-200">
+    <div className="min-h-screen bg-white font-sans text-slate-900 overflow-x-hidden">
+      {/* Premium Navbar */}
+      <nav className="fixed w-full z-50 bg-white/95 backdrop-blur-md border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
-            {/* Logo */}
             <div className="flex-shrink-0 flex items-center cursor-pointer">
               <span className="font-serif text-3xl font-bold tracking-tight text-slate-900">
                 ASGARO<span className="text-amber-600">.</span>
               </span>
-              <span className="hidden sm:inline-block ml-3 text-xs font-semibold uppercase tracking-wider text-slate-500 border-l border-slate-300 pl-3">
-                Manufacturer
-              </span>
             </div>
-
-            {/* Desktop Menu */}
-            <div className="hidden md:flex space-x-8 items-center">
-              <a href="#collections" className="text-slate-600 hover:text-slate-900 transition-colors font-medium">Our Range</a>
-              <a href="#features" className="text-slate-600 hover:text-slate-900 transition-colors font-medium">Capabilities</a>
-              <a href="#about" className="text-slate-600 hover:text-slate-900 transition-colors font-medium">Manufacturing Trust</a>
+            <div className="hidden md:flex space-x-10 items-center font-semibold text-slate-600">
+              <a href="#collections" className="hover:text-slate-900 transition-colors">Range</a>
+              <a href="#about" className="hover:text-slate-900 transition-colors">Our Legacy</a>
             </div>
-
-            {/* Icons */}
             <div className="flex items-center space-x-4">
-              <a 
-                href="https://wa.me/919653181917" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="hidden md:flex items-center space-x-2 bg-slate-900 text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-slate-800 transition-colors shadow-sm"
-              >
-                <MessageCircle className="w-4 h-4" />
-                <span>Wholesale Queries</span>
+              <a href="https://wa.me/919653181917" target="_blank" className="bg-slate-900 text-white px-8 py-2.5 rounded-full text-sm font-bold hover:bg-amber-600 transition-all shadow-xl flex items-center gap-2">
+                <MessageCircle className="w-4 h-4" /> Bulk Quote
               </a>
-              <button 
-                className="md:hidden p-2 text-slate-600"
-                onClick={() => setIsMenuOpen(!isMenuOpen)}
-              >
-                {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              <button className="md:hidden text-slate-900" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+                {isMenuOpen ? <X /> : <Menu />}
               </button>
             </div>
           </div>
         </div>
-
-        {/* Mobile Menu */}
-        <AnimatePresence>
-          {isMenuOpen && (
-            <motion.div 
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
-              className="md:hidden bg-white border-b border-slate-200"
-            >
-              <div className="px-4 pt-2 pb-6 space-y-4 shadow-lg">
-                <a href="#collections" className="block px-3 py-2 text-base font-medium text-slate-700 rounded-md hover:bg-slate-50">Our Range</a>
-                <a href="#features" className="block px-3 py-2 text-base font-medium text-slate-700 rounded-md hover:bg-slate-50">Capabilities</a>
-                <a href="#about" className="block px-3 py-2 text-base font-medium text-slate-700 rounded-md hover:bg-slate-50">Manufacturing Trust</a>
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
       </nav>
 
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="max-w-2xl"
-            >
-              <div className="inline-flex items-center space-x-2 bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm font-semibold mb-6">
-                <Factory className="w-4 h-4 text-amber-600" />
-                <span>Top Manufacturer in Ludhiana</span>
-              </div>
-              <h1 className="text-5xl lg:text-7xl font-bold tracking-tight text-slate-900 mb-6 leading-tight">
-                Premium Bags <br/>
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-900 to-slate-500">
-                  Direct to Wholesale.
-                </span>
-              </h1>
-              <p className="text-lg text-slate-600 mb-8 max-w-lg leading-relaxed">
-                We are proud manufacturers of high-quality trolley bags. Supplying retail businesses across India with durable, elegant, and bulk-ready luggage inspired by MD Asgar.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <a href="https://wa.me/919653181917" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto px-8 py-4 bg-slate-900 text-white rounded-full font-medium hover:bg-slate-800 transition-all flex items-center justify-center group shadow-xl shadow-slate-900/20">
-                  Get Bulk Quote
-                  <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                </a>
-                <a href="#collections" className="w-full sm:w-auto px-8 py-4 bg-white text-slate-900 border border-slate-200 rounded-full font-medium hover:bg-slate-50 transition-all flex items-center justify-center">
-                  View Catalog
-                </a>
-              </div>
-            </motion.div>
-
-            <motion.div 
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="relative"
-            >
-              <div className="absolute inset-0 bg-gradient-to-tr from-amber-100 to-slate-100 rounded-[3rem] transform rotate-3 scale-105 -z-10"></div>
-              <img 
-                src="/bag1.jpg" 
-                alt="Premium Asgaro Trolley Bag Manufacturing" 
-                className="rounded-[3rem] object-contain p-6 h-[500px] w-full shadow-2xl bg-white scale-100 hover:scale-105 transition-transform duration-700 ease-out"
-                referrerPolicy="no-referrer"
-              />
-              
-              {/* Floating Badge */}
-              <motion.div 
-                animate={{ y: [0, -10, 0] }}
-                transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
-                className="absolute -bottom-6 -left-6 bg-white p-4 rounded-2xl shadow-xl flex items-center space-x-4 border border-slate-100"
-              >
-                <div className="bg-green-100 p-2 rounded-full">
-                  <PackageOpen className="w-6 h-6 text-green-600" />
-                </div>
-                <div>
-                  <p className="text-sm font-bold text-slate-900">Custom OEM</p>
-                  <p className="text-xs text-slate-500">Your Brand, Our Quality</p>
-                </div>
-              </motion.div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section id="features" className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-4">Our Manufacturing Promise</h2>
-            <p className="text-lg text-slate-600">Partnering with businesses to strictly deliver unmatched durability and design for the consumer market.</p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                icon: <Factory className="w-8 h-8 text-amber-600" />,
-                title: "Large-Scale Production",
-                desc: "Equipped factory capabilities in Ludhiana to handle high-volume bulk orders efficiently."
-              },
-              {
-                icon: <Wind className="w-8 h-8 text-amber-600" />,
-                title: "Premium Fabrics",
-                desc: "Sourcing only top-tier water-resistant nylons and superior canvas blends for durable softside bags."
-              },
-              {
-                icon: <PackageOpen className="w-8 h-8 text-amber-600" />,
-                title: "Custom Branding (OEM)",
-                desc: "Add your retail logo and brand colors to our expertly crafted trolley bag lines."
-              }
-            ].map((feature, idx) => (
-              <div key={idx} className="bg-slate-50 p-8 rounded-3xl border border-slate-100 hover:shadow-lg transition-shadow">
-                <div className="bg-white w-16 h-16 rounded-2xl flex items-center justify-center mb-6 shadow-sm border border-slate-100">
-                  {feature.icon}
-                </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-3">{feature.title}</h3>
-                <p className="text-slate-600 leading-relaxed">{feature.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Products Section */}
-      <section id="collections" className="py-24 bg-slate-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row justify-between items-end mb-12">
-            <div>
-              <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-4">The MD Asgar Collection</h2>
-              <p className="text-lg text-slate-600 max-w-2xl">Robust and elegant ready-for-retail wholesale lines.</p>
-            </div>
-            <a href="https://wa.me/919653181917" target="_blank" rel="noopener noreferrer" className="hidden md:flex items-center text-amber-600 font-semibold hover:text-amber-700 group">
-              Request Full Catalog <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </a>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {products.map((product) => (
-              <motion.div 
-                key={product.id}
-                whileHover={{ y: -10 }}
-                className="bg-white rounded-[2rem] overflow-hidden border border-slate-100 shadow-sm hover:shadow-xl transition-all group flex flex-col"
-              >
-                <div className="relative h-96 overflow-hidden bg-white p-4 flex justify-center items-center">
-                  <div className="absolute top-4 left-4 z-10">
-                    <span className="bg-white/90 backdrop-blur-sm text-slate-900 text-xs font-bold px-3 py-1.5 rounded-full shadow-sm border border-slate-100">
-                      {product.tag}
-                    </span>
-                  </div>
-                  <img 
-                    src={product.image} 
-                    alt={product.name}
-                    className="h-full w-full object-contain p-2 scale-[1.15] group-hover:scale-[1.25] transition-transform duration-700 ease-out drop-shadow-xl"
-                    referrerPolicy="no-referrer"
-                  />
-                </div>
-                <div className="p-8 flex flex-col flex-1">
-                  <div className="flex items-center space-x-1 mb-3">
-                    <span className="text-sm font-bold text-slate-600 uppercase tracking-wider">{product.material}</span>
-                  </div>
-                  <h3 className="text-xl font-bold text-slate-900 mb-2">{product.name}</h3>
-                  <div className="mt-auto pt-6">
-                    <p className="text-slate-500 text-sm font-medium mb-4">{product.moq}</p>
-                    <a 
-                      href={`https://wa.me/919653181917?text=Hi, I want a bulk quote for ${encodeURIComponent(product.name)}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-full bg-slate-900 text-white py-3 rounded-xl flex items-center justify-center space-x-2 hover:bg-slate-800 transition-colors font-medium text-sm tooltip cursor-pointer"
-                    >
-                       <MessageCircle className="w-4 h-4" />
-                       <span>Inquire Wholesale Rate</span>
-                    </a>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-          
-          <a href="https://wa.me/919653181917" target="_blank" rel="noopener noreferrer" className="mt-8 md:hidden w-full py-4 text-center text-amber-600 font-semibold border border-amber-200 rounded-full block">
-            Request Full Catalog
-          </a>
-        </div>
-      </section>
-
-      {/* About Legacy Section */}
-      <section id="about" className="py-24 bg-slate-900 text-white">
+      {/* Hero - Airport Red Bag */}
+      <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <img 
-                src="/img1.jpg" 
-                alt="Travel Lifestyle" 
-                className="rounded-[3rem] p-6 object-contain h-[450px] w-full bg-white shadow-2xl scale-100"
-                referrerPolicy="no-referrer"
-              />
-            </div>
-            <div>
-              <div className="mb-6">
-                <span className="text-amber-500 font-bold tracking-wider uppercase text-sm">Industrial Integrity</span>
+            <motion.div initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }}>
+              <div className="inline-flex items-center space-x-2 bg-amber-50 text-amber-700 px-4 py-2 rounded-full text-xs font-black mb-8 border border-amber-100 uppercase tracking-widest">
+                <Factory className="w-4 h-4" /> <span>Ludhiana's Manufacturing Powerhouse</span>
               </div>
-              <h2 className="text-3xl lg:text-5xl font-bold mb-6 font-serif">A Legacy of <br/>Manufacturing Trust</h2>
-              <p className="text-slate-300 text-lg mb-8 leading-relaxed">
-                Asgaro isn't a mere retail brand; it's a Ludhiana-based manufacturing powerhouse inspired by the principles of MD Asgar. A name that stands for durability, trust, and moving forward no matter the obstacles.
+              <h1 className="text-6xl lg:text-8xl font-black text-slate-900 mb-8 leading-[1.05]">
+                Built For <br/><span className="text-amber-600 italic">The Hustle.</span>
+              </h1>
+              <p className="text-xl text-slate-500 mb-12 leading-relaxed max-w-lg font-medium">
+                Supplying India's retailers with trolley bags that stand the test of time. Wholesale manufacturing direct from the source.
               </p>
-              <p className="text-slate-300 text-lg mb-8 leading-relaxed">
-                We focus strictly on providing retailers and bulk buyers with the best quality bags so they can pass on that reliability to their customers. When you stock Asgaro, you are selling products built on an unshakeable foundation.
+              <a href="https://wa.me/919653181917" className="inline-flex items-center px-12 py-6 bg-slate-900 text-white rounded-full font-black text-xl hover:bg-slate-800 transition-all shadow-2xl hover:-translate-y-1">
+                Start Bulk Order <ArrowRight className="ml-3" />
+              </a>
+            </motion.div>
+            <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 1 }} className="relative">
+              <div className="absolute -inset-10 bg-slate-50 rounded-[5rem] -z-10 rotate-3"></div>
+              <img src="/file_000000007cdc7208bf2995f04e6521f1.png" alt="Asgaro Red Bag" className="rounded-[4rem] shadow-2xl w-full h-[650px] object-contain bg-white p-8" />
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Collection Grid */}
+      <section id="collections" className="py-24 bg-slate-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-24">
+            <h2 className="text-5xl font-black text-slate-900 mb-6">Wholesale Catalog</h2>
+            <p className="text-slate-500 text-lg font-medium">Premium ready-to-ship inventory for retail partners.</p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-12">
+            {products.map((p) => (
+              <motion.div key={p.id} whileHover={{ y: -15 }} className="bg-white rounded-[3rem] p-10 border border-slate-100 shadow-sm hover:shadow-2xl transition-all group flex flex-col h-full">
+                <div className="h-72 overflow-hidden mb-10 flex justify-center items-center">
+                  <img src={p.image} alt={p.name} className="h-full object-contain group-hover:scale-110 transition-transform duration-1000" />
+                </div>
+                <div className="mt-auto">
+                  <span className="text-amber-600 font-black text-xs uppercase tracking-widest mb-3 block">{p.tag}</span>
+                  <h3 className="text-2xl font-bold mb-3 text-slate-900">{p.name}</h3>
+                  <p className="text-slate-500 mb-10 font-medium">{p.material}</p>
+                  <div className="flex items-center justify-between pt-8 border-t border-slate-50">
+                    <span className="text-slate-900 font-black">{p.moq}</span>
+                    <a href="https://wa.me/919653181917" target="_blank" className="p-4 bg-slate-900 text-white rounded-2xl hover:bg-amber-600 transition-all"><MessageCircle className="w-6 h-6" /></a>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* About Section - Using Purple Airport Photo */}
+      <section id="about" className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-24 items-center">
+            <div className="order-2 lg:order-1 relative">
+              <img src="/file_0000000012387208a0d377cc39ccf0f8.png" alt="MD Asgar Vision" className="rounded-[4rem] h-[550px] w-full object-contain bg-slate-50 p-12 shadow-2xl" />
+            </div>
+            <div className="order-1 lg:order-2">
+              <h2 className="text-5xl font-black mb-10 text-slate-900 leading-tight italic">Inspired by <br/>MD Asgar.</h2>
+              <p className="text-xl text-slate-500 leading-relaxed mb-12 font-medium">
+                At Asgaro, we don't just manufacture luggage; we build trust. Our Ludhiana facility is dedicated to industrial excellence, ensuring every bag that leaves our floor is ready for the world.
               </p>
-              <ul className="space-y-4">
-                {[
-                  "Factory-Direct Pricing",
-                  "Strict Quality Control from Source",
-                  "Reliable Supply Chain for Retailers"
-                ].map((item, idx) => (
-                  <li key={idx} className="flex items-center text-slate-200">
-                    <Check className="w-5 h-5 text-amber-500 mr-3 shrink-0" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
+              <div className="grid grid-cols-2 gap-8 mb-12">
+                <div>
+                  <h4 className="text-3xl font-black text-amber-600 mb-2">100%</h4>
+                  <p className="text-slate-500 font-bold text-sm">Quality Checked</p>
+                </div>
+                <div>
+                  <h4 className="text-3xl font-black text-amber-600 mb-2">B2B</h4>
+                  <p className="text-slate-500 font-bold text-sm">Direct Pricing</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="bg-white pt-20 pb-10 border-t border-slate-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 mb-16">
-            <div className="col-span-2 lg:col-span-2">
-              <span className="font-serif text-3xl font-bold tracking-tight text-slate-900 mb-6 block">
-                ASGARO<span className="text-amber-600 block text-lg font-sans">Manufacturing</span>
-              </span>
-              <p className="text-slate-500 mb-6 max-w-sm">
-                Premium trolley bag manufacturers supplying high-quality, durable luggage to retailers nationwide. Inspired by MD Asgar.
-              </p>
-              <div className="flex items-center text-slate-500 mb-3">
-                <MapPin className="w-5 h-5 mr-3 text-amber-600 shrink-0" />
-                <span>Ludhiana, Punjab, India</span>
-              </div>
-              <div className="flex items-center text-slate-500">
-                <MessageCircle className="w-5 h-5 mr-3 text-amber-600 shrink-0" />
-                <span>+91 9653181917</span>
-              </div>
-            </div>
-            
-            <div>
-              <h4 className="font-bold text-slate-900 mb-4">Our Products</h4>
-              <ul className="space-y-3">
-                <li><a href="#" className="text-slate-500 hover:text-amber-600 transition-colors">Cabin Luggage</a></li>
-                <li><a href="#" className="text-slate-500 hover:text-amber-600 transition-colors">Medium Luggage</a></li>
-                <li><a href="#" className="text-slate-500 hover:text-amber-600 transition-colors">Large Luggage</a></li>
-                <li><a href="#" className="text-slate-500 hover:text-amber-600 transition-colors">Custom OEM Orders</a></li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="font-bold text-slate-900 mb-4">Retail Support</h4>
-              <ul className="space-y-3">
-                <li><a href="https://wa.me/919653181917" className="text-slate-500 hover:text-amber-600 transition-colors">Contact WhatsApp</a></li>
-                <li><a href="#" className="text-slate-500 hover:text-amber-600 transition-colors">Manufacturing Policy</a></li>
-                <li><a href="#" className="text-slate-500 hover:text-amber-600 transition-colors">Logistics & Supply</a></li>
-                <li><a href="#" className="text-slate-500 hover:text-amber-600 transition-colors">Bulk Order FAQ</a></li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="font-bold text-slate-900 mb-4">Follow Us</h4>
-              <ul className="space-y-3">
-                <li><a href="https://www.instagram.com/aspak__x07?igsh=eTFxM3J5YndqM3h3" target="_blank" rel="noopener noreferrer" className="text-slate-500 hover:text-amber-600 transition-colors flex items-center"><Instagram className="w-4 h-4 mr-2" /> Instagram</a></li>
-                <li><a href="https://www.facebook.com/share/18qqzoHEwr/" target="_blank" rel="noopener noreferrer" className="text-slate-500 hover:text-amber-600 transition-colors flex items-center"><Facebook className="w-4 h-4 mr-2" /> Facebook</a></li>
-                <li><a href="https://x.com/aspak_muha46091" target="_blank" rel="noopener noreferrer" className="text-slate-500 hover:text-amber-600 transition-colors flex items-center"><Twitter className="w-4 h-4 mr-2" /> Twitter (X)</a></li>
-              </ul>
-            </div>
+      <footer className="py-20 bg-slate-900 text-white">
+        <div className="max-w-7xl mx-auto px-4 text-center">
+          <div className="mb-12">
+            <span className="font-serif text-4xl font-bold tracking-tight">ASGARO<span className="text-amber-500">.</span></span>
           </div>
-
-          <div className="border-t border-slate-100 pt-8 flex flex-col md:flex-row justify-between items-center">
-            <p className="text-slate-400 text-sm mb-4 md:mb-0">
-              © {new Date().getFullYear()} Asgaro Manufacturing. All rights reserved.
-            </p>
-            <div className="flex space-x-6">
-              <a href="#" className="text-slate-400 text-sm hover:text-slate-600">B2B Privacy Policy</a>
-              <a href="#" className="text-slate-400 text-sm hover:text-slate-600">Terms of Supply</a>
-            </div>
+          <div className="flex justify-center space-x-12 mb-16">
+            <a href="https://www.instagram.com/aspak__x07" target="_blank" className="text-slate-400 hover:text-amber-500 transition-all transform hover:scale-125"><Instagram /></a>
+            <a href="https://www.facebook.com/share/18qqzoHEwr/" target="_blank" className="text-slate-400 hover:text-amber-500 transition-all transform hover:scale-125"><Facebook /></a>
+            <a href="https://x.com/aspak_muha46091" target="_blank" className="text-slate-400 hover:text-amber-500 transition-all transform hover:scale-125"><Twitter /></a>
           </div>
+          <p className="text-slate-500 text-sm font-bold tracking-widest uppercase">Ludhiana, Punjab | Inspired by MD Asgar | © 2026</p>
         </div>
       </footer>
-      {/* Floating WhatsApp Button / Chatbot */}
-      <a 
-        href="https://wa.me/919653181917"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="fixed bottom-6 right-6 bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:bg-[#1ebe57] hover:-translate-y-1 transition-all z-50 flex items-center justify-center group"
-      >
-        <MessageCircle className="w-8 h-8" />
-        <span className="absolute right-full mr-4 bg-white text-slate-900 text-sm font-bold px-4 py-2 rounded-xl shadow-lg opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity whitespace-nowrap hidden sm:block">
-          Chat with us on WhatsApp!
-        </span>
+
+      {/* Sticky WhatsApp */}
+      <a href="https://wa.me/919653181917" target="_blank" className="fixed bottom-10 right-10 bg-[#25D366] text-white p-6 rounded-full shadow-2xl z-50 hover:scale-110 hover:-translate-y-3 transition-all active:scale-95">
+        <MessageCircle className="w-10 h-10" />
       </a>
     </div>
   );
 }
+

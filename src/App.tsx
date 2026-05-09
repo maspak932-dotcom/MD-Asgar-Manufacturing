@@ -39,7 +39,7 @@ function App() {
   const contactEmail = "Maspak932@gmail.com";
   
   const socialLinks = {
-    instagram: "https://md-asgar-manufacturing.vercel.app/
+    instagram: "https://www.instagram.com/funny_joke6114?igsh=MWRvcnloZGdvOWNlcg==",
     facebook: "https://www.facebook.com/share/18pgTtHLd8/",
     twitter: "https://x.com/aspak_muha46091",
     youtube: "https://www.youtube.com/@TheSilent-01"
@@ -172,4 +172,3 @@ function App() {
 }
 
 export default App;
-

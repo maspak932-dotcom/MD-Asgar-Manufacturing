@@ -1,4 +1,5 @@
 import React from 'react';
+
 import {
   Phone,
   Mail,
@@ -17,57 +18,74 @@ const products = [
     id: 1,
     name: "Premium Fabric Trolley",
     image: "/file_0000000012387208a0d377cc39ccf0f8.png",
-    description: "High-quality fabric trolley bag with strong material and modern design."
+    description:
+      "High-quality fabric trolley bag with strong material and modern design."
   },
 
   {
     id: 2,
     name: "Executive Travel Bag",
     image: "/file_000000007ccc720b85830076b29cf37f.png",
-    description: "Elegant and durable luggage for business and travel use."
+    description:
+      "Elegant and durable luggage for business and travel use."
   },
 
   {
     id: 3,
     name: "Soft Shell Collection",
     image: "/file_000000007cdc7208bf2995f04e6521f1.png",
-    description: "Lightweight, spacious and comfortable for long journeys."
+    description:
+      "Lightweight, spacious and comfortable for long journeys."
   },
 
   {
     id: 4,
     name: "Urban Travel Series",
     image: "/file_00000000bab8720bb04e2a6ed7e534f9.png",
-    description: "Stylish trolley bag with maximum storage capacity."
+    description:
+      "Stylish trolley bag with maximum storage capacity."
   },
 
   {
     id: 5,
     name: "Plastic Trolley Collection",
     image: "/file_00000000cc3072089dd33b05cc0c6e10.png",
-    description: "Strong plastic trolley bags with premium finishing."
+    description:
+      "Strong plastic trolley bags with premium finishing."
   }
 ];
 
 function App() {
 
   const contactNumber = "9653181917";
+
   const contactEmail = "Maspak932@gmail.com";
 
   const socialLinks = {
-    instagram: "https://www.instagram.com/funny_joke6114?igsh=MWRvcnloZGdvOWNlcg==",
-    facebook: "https://www.facebook.com/share/18pgTtHLd8/",
-    twitter: "https://x.com/aspak_muha46091",
-    youtube: "https://www.youtube.com/@TheSilent-01"
+    instagram:
+      "https://www.instagram.com/funny_joke6114?igsh=MWRvcnloZGdvOWNlcg==",
+
+    facebook:
+      "https://www.facebook.com/share/18pgTtHLd8/",
+
+    twitter:
+      "https://x.com/aspak_muha46091",
+
+    youtube:
+      "https://www.youtube.com/@TheSilent-01"
   };
 
-  const whatsappLink = `https://wa.me/${contactNumber}?text=Hello, I am interested in your trolley bag products.`;
+  const whatsappLink =
+    `https://wa.me/${contactNumber}?text=Hello, I am interested in your trolley bag products.`;
 
   return (
+
     <div className="min-h-screen bg-[#f5f1ea] text-slate-900">
 
       {/* Navbar */}
+
       <nav className="bg-black sticky top-0 z-50 shadow-lg">
+
         <div className="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between">
 
           <div className="flex items-center gap-4">
@@ -75,28 +93,30 @@ function App() {
             <img
               src="/a_logo_for_asgaro_is_created_digitally_in_the_cent.png"
               alt="MD ASGAR Logo"
-              className="h-14 object-contain"
+              className="h-14 w-auto object-contain"
             />
 
             <div>
-              <p className="text-yellow-400 text-2xl font-bold">
-                MD ASGAR
-              </p>
 
-              <p className="text-gray-400 text-sm">
+              <h1 className="text-yellow-400 text-2xl md:text-3xl font-bold">
+                MD ASGAR
+              </h1>
+
+              <p className="text-gray-400 text-sm md:text-base">
                 Manufactured By Mohammed Asgar
               </p>
+
             </div>
 
           </div>
 
-          <div className="flex gap-5">
+          <div className="flex gap-4">
 
             <a
               href={socialLinks.instagram}
               target="_blank"
               rel="noreferrer"
-              className="text-gray-300 hover:text-pink-500 transition"
+              className="text-white hover:text-pink-500 transition"
             >
               <Instagram size={22} />
             </a>
@@ -105,7 +125,7 @@ function App() {
               href={socialLinks.facebook}
               target="_blank"
               rel="noreferrer"
-              className="text-gray-300 hover:text-blue-500 transition"
+              className="text-white hover:text-blue-500 transition"
             >
               <Facebook size={22} />
             </a>
@@ -114,7 +134,7 @@ function App() {
               href={socialLinks.twitter}
               target="_blank"
               rel="noreferrer"
-              className="text-gray-300 hover:text-white transition"
+              className="text-white hover:text-gray-300 transition"
             >
               <Twitter size={22} />
             </a>
@@ -123,61 +143,97 @@ function App() {
               href={socialLinks.youtube}
               target="_blank"
               rel="noreferrer"
-              className="text-gray-300 hover:text-red-500 transition"
+              className="text-white hover:text-red-500 transition"
             >
               <Youtube size={22} />
             </a>
 
           </div>
+
         </div>
+
       </nav>
 
       {/* Hero Section */}
-      <header className="relative h-[90vh] overflow-hidden flex items-center justify-center text-center">
 
-        <img
-          src="/file_00000000bd407208872d3c30def578c7.png"
-          alt="MD ASGAR Banner"
-          className="absolute inset-0 w-full h-full object-cover"
-        />
+      <header className="bg-black">
 
-        <div className="absolute inset-0 bg-black/70"></div>
+        {/* Banner Image */}
 
-        <div className="relative z-10 px-4">
+        <div className="w-full bg-black flex justify-center items-center overflow-hidden">
 
-          <h2 className="text-5xl md:text-7xl font-extrabold text-white mb-6">
+          <img
+            src="/file_00000000bd407208872d3c30def578c7.png"
+            alt="MD ASGAR Banner"
+            className="
+              w-full
+              h-auto
+              object-contain
+              md:object-cover
+              md:h-[85vh]
+            "
+          />
+
+        </div>
+
+        {/* Text Section */}
+
+        <div className="text-center px-5 py-10 bg-black">
+
+          <h2 className="text-white text-4xl md:text-7xl font-extrabold mb-5 tracking-wide">
             MD ASGAR
           </h2>
 
-          <p className="text-yellow-400 text-xl md:text-2xl mb-4 font-semibold">
+          <h3 className="text-yellow-400 text-2xl md:text-4xl font-bold mb-6">
             Manufactured By Mohammed Asgar
-          </p>
+          </h3>
 
-          <p className="text-gray-300 max-w-2xl mx-auto text-lg leading-relaxed">
-            Premium Fabric & Plastic Trolley Bag Manufacturer
-            with modern designs, durable quality and wholesale pricing.
+          <p className="text-gray-300 text-lg md:text-2xl max-w-4xl mx-auto leading-relaxed">
+            Premium Fabric & Plastic Trolley Bag Manufacturer with modern
+            designs, durable quality and wholesale pricing for retailers and
+            shop owners.
           </p>
 
           <a
             href={whatsappLink}
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center gap-3 mt-8 bg-yellow-500 hover:bg-yellow-400 text-black px-8 py-4 rounded-2xl font-bold transition-all duration-300 shadow-2xl"
+            className="
+              inline-flex
+              items-center
+              gap-3
+              mt-10
+              bg-yellow-500
+              hover:bg-yellow-400
+              text-black
+              px-8
+              py-4
+              rounded-2xl
+              font-bold
+              text-lg
+              transition-all
+            "
           >
-            Contact Now
+            Contact On WhatsApp
+
             <ChevronRight size={22} />
+
           </a>
 
         </div>
 
       </header>
 
-      {/* Features */}
+      {/* Features Section */}
+
       <section className="max-w-7xl mx-auto py-20 px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
 
         <div className="bg-white p-8 rounded-[2rem] shadow-xl text-center hover:-translate-y-2 transition-all duration-500">
 
-          <ShieldCheck className="mx-auto text-yellow-500 mb-4" size={50} />
+          <ShieldCheck
+            className="mx-auto text-yellow-500 mb-4"
+            size={50}
+          />
 
           <h3 className="text-2xl font-bold mb-3">
             Premium Quality
@@ -191,7 +247,10 @@ function App() {
 
         <div className="bg-white p-8 rounded-[2rem] shadow-xl text-center hover:-translate-y-2 transition-all duration-500">
 
-          <Recycle className="mx-auto text-green-500 mb-4" size={50} />
+          <Recycle
+            className="mx-auto text-green-500 mb-4"
+            size={50}
+          />
 
           <h3 className="text-2xl font-bold mb-3">
             Eco Friendly
@@ -205,7 +264,10 @@ function App() {
 
         <div className="bg-white p-8 rounded-[2rem] shadow-xl text-center hover:-translate-y-2 transition-all duration-500">
 
-          <MessageCircle className="mx-auto text-blue-500 mb-4" size={50} />
+          <MessageCircle
+            className="mx-auto text-blue-500 mb-4"
+            size={50}
+          />
 
           <h3 className="text-2xl font-bold mb-3">
             Direct Wholesale
@@ -219,7 +281,8 @@ function App() {
 
       </section>
 
-      {/* Product Section */}
+      {/* Products */}
+
       <main className="max-w-7xl mx-auto px-4 py-10">
 
         <div className="text-center mb-16">
@@ -242,7 +305,16 @@ function App() {
 
             <div
               key={product.id}
-              className="bg-white rounded-[2rem] overflow-hidden shadow-xl hover:-translate-y-3 hover:shadow-[0_20px_60px_rgba(0,0,0,0.2)] transition-all duration-500"
+              className="
+                bg-white
+                rounded-[2rem]
+                overflow-hidden
+                shadow-xl
+                hover:-translate-y-3
+                hover:shadow-[0_20px_60px_rgba(0,0,0,0.2)]
+                transition-all
+                duration-500
+              "
             >
 
               <div className="bg-white h-[350px] overflow-hidden p-4">
@@ -269,10 +341,27 @@ function App() {
                   href={whatsappLink}
                   target="_blank"
                   rel="noreferrer"
-                  className="w-full bg-black hover:bg-yellow-500 hover:text-black text-white py-4 rounded-2xl font-bold flex items-center justify-center gap-3 transition-all duration-300"
+                  className="
+                    w-full
+                    bg-black
+                    hover:bg-yellow-500
+                    hover:text-black
+                    text-white
+                    py-4
+                    rounded-2xl
+                    font-bold
+                    flex
+                    items-center
+                    justify-center
+                    gap-3
+                    transition-all
+                    duration-300
+                  "
                 >
                   Enquire Now
+
                   <ChevronRight size={20} />
+
                 </a>
 
               </div>
@@ -282,9 +371,11 @@ function App() {
           ))}
 
         </div>
+
       </main>
 
       {/* Footer */}
+
       <footer className="bg-black text-white py-20 px-4 mt-20">
 
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16">
@@ -307,11 +398,27 @@ function App() {
 
               <a
                 href={`tel:${contactNumber}`}
-                className="flex items-center gap-4 bg-zinc-900 border border-zinc-800 p-5 rounded-2xl hover:border-yellow-500 transition"
+                className="
+                  flex
+                  items-center
+                  gap-4
+                  bg-zinc-900
+                  border
+                  border-zinc-800
+                  p-5
+                  rounded-2xl
+                  hover:border-yellow-500
+                  transition
+                "
               >
 
                 <div className="bg-yellow-500/20 p-3 rounded-xl">
-                  <Phone className="text-yellow-400" size={24} />
+
+                  <Phone
+                    className="text-yellow-400"
+                    size={24}
+                  />
+
                 </div>
 
                 <span className="text-lg font-medium">
@@ -322,11 +429,27 @@ function App() {
 
               <a
                 href={`mailto:${contactEmail}`}
-                className="flex items-center gap-4 bg-zinc-900 border border-zinc-800 p-5 rounded-2xl hover:border-yellow-500 transition"
+                className="
+                  flex
+                  items-center
+                  gap-4
+                  bg-zinc-900
+                  border
+                  border-zinc-800
+                  p-5
+                  rounded-2xl
+                  hover:border-yellow-500
+                  transition
+                "
               >
 
                 <div className="bg-yellow-500/20 p-3 rounded-xl">
-                  <Mail className="text-yellow-400" size={24} />
+
+                  <Mail
+                    className="text-yellow-400"
+                    size={24}
+                  />
+
                 </div>
 
                 <span className="text-lg font-medium">
@@ -365,7 +488,7 @@ function App() {
                 href={socialLinks.twitter}
                 target="_blank"
                 rel="noreferrer"
-                className="hover:text-white transition"
+                className="hover:text-gray-300 transition"
               >
                 <Twitter size={34} />
               </a>
@@ -400,19 +523,35 @@ function App() {
           </div>
 
         </div>
+
       </footer>
 
       {/* WhatsApp Floating Button */}
+
       <a
         href={whatsappLink}
         target="_blank"
         rel="noreferrer"
-        className="fixed bottom-5 right-5 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-2xl z-50"
+        className="
+          fixed
+          bottom-5
+          right-5
+          bg-green-500
+          hover:bg-green-600
+          text-white
+          p-4
+          rounded-full
+          shadow-2xl
+          z-50
+        "
       >
+
         <MessageCircle size={32} />
+
       </a>
 
     </div>
+
   );
 }
 

@@ -14,6 +14,7 @@ import {
 } from 'lucide-react';
 
 const products = [
+
   {
     id: 1,
     name: "Premium Fabric Trolley",
@@ -53,6 +54,7 @@ const products = [
     description:
       "Strong plastic trolley bags with premium finishing."
   }
+
 ];
 
 function App() {
@@ -62,6 +64,7 @@ function App() {
   const contactEmail = "Maspak932@gmail.com";
 
   const socialLinks = {
+
     instagram:
       "https://www.instagram.com/funny_joke6114?igsh=MWRvcnloZGdvOWNlcg==",
 
@@ -73,6 +76,7 @@ function App() {
 
     youtube:
       "https://www.youtube.com/@TheSilent-01"
+
   };
 
   const whatsappLink =
@@ -80,29 +84,29 @@ function App() {
 
   return (
 
-    <div className="min-h-screen bg-[#f5f1ea] text-slate-900">
+    <div className="min-h-screen bg-[#f5f1ea] text-slate-900 overflow-x-hidden">
 
-      {/* Navbar */}
+      {/* NAVBAR */}
 
       <nav className="bg-black sticky top-0 z-50 shadow-lg">
 
         <div className="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between">
 
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-3">
 
             <img
-              src="/a_logo_for_asgaro_is_created_digitally_in_the_cent.png"
+              src="/file_000000004c787208a3641f9ba0bfc52d.png"
               alt="MD ASGAR Logo"
-              className="h-14 w-auto object-contain"
+              className="h-14 md:h-16 w-auto object-contain"
             />
 
             <div>
 
-              <h1 className="text-yellow-400 text-2xl md:text-3xl font-bold">
+              <h1 className="text-yellow-400 text-xl md:text-3xl font-bold">
                 MD ASGAR
               </h1>
 
-              <p className="text-gray-400 text-sm md:text-base">
+              <p className="text-gray-400 text-xs md:text-sm">
                 Manufactured By Mohammed Asgar
               </p>
 
@@ -110,7 +114,7 @@ function App() {
 
           </div>
 
-          <div className="flex gap-4">
+          <div className="flex gap-3 md:gap-5">
 
             <a
               href={socialLinks.instagram}
@@ -154,13 +158,13 @@ function App() {
 
       </nav>
 
-      {/* Hero Section */}
+      {/* HERO SECTION */}
 
       <header className="bg-black">
 
-        {/* Banner Image */}
+        {/* FULL BANNER */}
 
-        <div className="w-full bg-black flex justify-center items-center overflow-hidden">
+        <div className="w-full bg-black overflow-hidden">
 
           <img
             src="/file_00000000bd407208872d3c30def578c7.png"
@@ -169,29 +173,34 @@ function App() {
               w-full
               h-auto
               object-contain
-              md:object-cover
-              md:h-[85vh]
+              block
             "
           />
 
         </div>
 
-        {/* Text Section */}
+        {/* TEXT BELOW IMAGE */}
 
         <div className="text-center px-5 py-10 bg-black">
 
-          <h2 className="text-white text-4xl md:text-7xl font-extrabold mb-5 tracking-wide">
+          <h2 className="text-white text-4xl md:text-7xl font-extrabold mb-5">
+
             MD ASGAR
+
           </h2>
 
           <h3 className="text-yellow-400 text-2xl md:text-4xl font-bold mb-6">
+
             Manufactured By Mohammed Asgar
+
           </h3>
 
-          <p className="text-gray-300 text-lg md:text-2xl max-w-4xl mx-auto leading-relaxed">
+          <p className="text-gray-300 text-base md:text-2xl max-w-4xl mx-auto leading-relaxed">
+
             Premium Fabric & Plastic Trolley Bag Manufacturer with modern
-            designs, durable quality and wholesale pricing for retailers and
-            shop owners.
+            designs, durable quality and wholesale pricing for retailers,
+            wholesalers and shop owners.
+
           </p>
 
           <a
@@ -214,6 +223,7 @@ function App() {
               transition-all
             "
           >
+
             Contact On WhatsApp
 
             <ChevronRight size={22} />
@@ -224,11 +234,11 @@ function App() {
 
       </header>
 
-      {/* Features Section */}
+      {/* FEATURES */}
 
-      <section className="max-w-7xl mx-auto py-20 px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <section className="max-w-7xl mx-auto py-16 px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
 
-        <div className="bg-white p-8 rounded-[2rem] shadow-xl text-center hover:-translate-y-2 transition-all duration-500">
+        <div className="bg-white p-8 rounded-[2rem] shadow-xl text-center">
 
           <ShieldCheck
             className="mx-auto text-yellow-500 mb-4"
@@ -236,16 +246,20 @@ function App() {
           />
 
           <h3 className="text-2xl font-bold mb-3">
+
             Premium Quality
+
           </h3>
 
           <p className="text-gray-600">
-            Durable trolley bags with high-quality stitching and strong material.
+
+            Durable trolley bags with strong stitching and premium material.
+
           </p>
 
         </div>
 
-        <div className="bg-white p-8 rounded-[2rem] shadow-xl text-center hover:-translate-y-2 transition-all duration-500">
+        <div className="bg-white p-8 rounded-[2rem] shadow-xl text-center">
 
           <Recycle
             className="mx-auto text-green-500 mb-4"
@@ -253,16 +267,20 @@ function App() {
           />
 
           <h3 className="text-2xl font-bold mb-3">
+
             Eco Friendly
+
           </h3>
 
           <p className="text-gray-600">
-            Sustainable manufacturing with reliable and long-lasting products.
+
+            Reliable and sustainable manufacturing with long-lasting products.
+
           </p>
 
         </div>
 
-        <div className="bg-white p-8 rounded-[2rem] shadow-xl text-center hover:-translate-y-2 transition-all duration-500">
+        <div className="bg-white p-8 rounded-[2rem] shadow-xl text-center">
 
           <MessageCircle
             className="mx-auto text-blue-500 mb-4"
@@ -270,31 +288,39 @@ function App() {
           />
 
           <h3 className="text-2xl font-bold mb-3">
+
             Direct Wholesale
+
           </h3>
 
           <p className="text-gray-600">
+
             Direct manufacturer pricing for retailers and bulk buyers.
+
           </p>
 
         </div>
 
       </section>
 
-      {/* Products */}
+      {/* PRODUCTS */}
 
       <main className="max-w-7xl mx-auto px-4 py-10">
 
         <div className="text-center mb-16">
 
           <h3 className="text-4xl font-extrabold mb-4">
+
             Our Collection
+
           </h3>
 
           <div className="h-1 w-28 bg-yellow-500 mx-auto rounded-full"></div>
 
           <p className="mt-5 text-gray-600 text-lg">
+
             Premium Fabric & Plastic Trolley Bags
+
           </p>
 
         </div>
@@ -310,14 +336,13 @@ function App() {
                 rounded-[2rem]
                 overflow-hidden
                 shadow-xl
-                hover:-translate-y-3
-                hover:shadow-[0_20px_60px_rgba(0,0,0,0.2)]
+                hover:-translate-y-2
                 transition-all
                 duration-500
               "
             >
 
-              <div className="bg-white h-[350px] overflow-hidden p-4">
+              <div className="bg-white h-[350px] p-4 flex items-center justify-center overflow-hidden">
 
                 <img
                   src={product.image}
@@ -330,11 +355,15 @@ function App() {
               <div className="p-8">
 
                 <h4 className="text-2xl font-bold mb-3">
+
                   {product.name}
+
                 </h4>
 
                 <p className="text-gray-600 leading-relaxed mb-8">
+
                   {product.description}
+
                 </p>
 
                 <a
@@ -355,9 +384,9 @@ function App() {
                     justify-center
                     gap-3
                     transition-all
-                    duration-300
                   "
                 >
+
                   Enquire Now
 
                   <ChevronRight size={20} />
@@ -374,7 +403,7 @@ function App() {
 
       </main>
 
-      {/* Footer */}
+      {/* FOOTER */}
 
       <footer className="bg-black text-white py-20 px-4 mt-20">
 
@@ -383,15 +412,21 @@ function App() {
           <div>
 
             <span className="text-yellow-400 uppercase tracking-[4px] text-sm font-bold">
+
               Contact Us
+
             </span>
 
             <h3 className="text-4xl font-extrabold mt-4 mb-6">
+
               Premium Trolley Bag Manufacturer
+
             </h3>
 
             <p className="text-gray-400 text-lg mb-10">
+
               Contact us directly for wholesale orders and manufacturing deals.
+
             </p>
 
             <div className="space-y-5">
@@ -407,8 +442,6 @@ function App() {
                   border-zinc-800
                   p-5
                   rounded-2xl
-                  hover:border-yellow-500
-                  transition
                 "
               >
 
@@ -422,7 +455,9 @@ function App() {
                 </div>
 
                 <span className="text-lg font-medium">
+
                   {contactNumber}
+
                 </span>
 
               </a>
@@ -438,8 +473,6 @@ function App() {
                   border-zinc-800
                   p-5
                   rounded-2xl
-                  hover:border-yellow-500
-                  transition
                 "
               >
 
@@ -453,7 +486,9 @@ function App() {
                 </div>
 
                 <span className="text-lg font-medium">
+
                   {contactEmail}
+
                 </span>
 
               </a>
@@ -507,15 +542,21 @@ function App() {
             <div className="border-t border-zinc-800 pt-8 mt-10 w-full text-right">
 
               <p className="text-yellow-400 font-bold text-xl">
+
                 MD ASGAR
+
               </p>
 
               <p className="text-gray-500 mt-2">
+
                 Manufactured By Mohammed Asgar
+
               </p>
 
               <p className="text-gray-600 text-sm mt-3">
+
                 © 2026 All Rights Reserved
+
               </p>
 
             </div>
@@ -526,7 +567,7 @@ function App() {
 
       </footer>
 
-      {/* WhatsApp Floating Button */}
+      {/* WHATSAPP BUTTON */}
 
       <a
         href={whatsappLink}
@@ -553,6 +594,7 @@ function App() {
     </div>
 
   );
+
 }
 
 export default App;

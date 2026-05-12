@@ -16,31 +16,35 @@ const products = [
   {
     id: 1,
     name: "Premium Fabric Trolley",
-    image: "/images/bag1.png",
+    image: "/file_0000000012387208a0d377cc39ccf0f8.png",
     description: "High-quality fabric trolley bag with strong material and modern design."
   },
+
   {
     id: 2,
     name: "Executive Travel Bag",
-    image: "/images/bag2.png",
+    image: "/file_000000007ccc720b85830076b29cf37f.png",
     description: "Elegant and durable luggage for business and travel use."
   },
+
   {
     id: 3,
     name: "Soft Shell Collection",
-    image: "/images/bag3.png",
+    image: "/file_000000007cdc7208bf2995f04e6521f1.png",
     description: "Lightweight, spacious and comfortable for long journeys."
   },
+
   {
     id: 4,
     name: "Urban Travel Series",
-    image: "/images/bag4.png",
+    image: "/file_00000000bab8720bb04e2a6ed7e534f9.png",
     description: "Stylish trolley bag with maximum storage capacity."
   },
+
   {
     id: 5,
     name: "Plastic Trolley Collection",
-    image: "/images/bag5.png",
+    image: "/file_00000000cc3072089dd33b05cc0c6e10.png",
     description: "Strong plastic trolley bags with premium finishing."
   }
 ];
@@ -66,14 +70,24 @@ function App() {
       <nav className="bg-black sticky top-0 z-50 shadow-lg">
         <div className="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between">
 
-          <div>
-            <h1 className="text-3xl font-extrabold text-yellow-400 tracking-wide">
-              MD ASGAR
-            </h1>
+          <div className="flex items-center gap-4">
 
-            <p className="text-gray-400 text-sm">
-              Manufactured By Mohammed Asgar
-            </p>
+            <img
+              src="/a_logo_for_asgaro_is_created_digitally_in_the_cent.png"
+              alt="MD ASGAR Logo"
+              className="h-14 object-contain"
+            />
+
+            <div>
+              <p className="text-yellow-400 text-2xl font-bold">
+                MD ASGAR
+              </p>
+
+              <p className="text-gray-400 text-sm">
+                Manufactured By Mohammed Asgar
+              </p>
+            </div>
+
           </div>
 
           <div className="flex gap-5">
@@ -122,8 +136,8 @@ function App() {
       <header className="relative h-[90vh] overflow-hidden flex items-center justify-center text-center">
 
         <img
-          src="/images/bag1.png"
-          alt="MD ASGAR"
+          src="/file_00000000bd407208872d3c30def578c7.png"
+          alt="MD ASGAR Banner"
           className="absolute inset-0 w-full h-full object-cover"
         />
 
@@ -155,6 +169,7 @@ function App() {
           </a>
 
         </div>
+
       </header>
 
       {/* Features */}
@@ -387,7 +402,7 @@ function App() {
         </div>
       </footer>
 
-      {/* Floating WhatsApp Button */}
+      {/* WhatsApp Floating Button */}
       <a
         href={whatsappLink}
         target="_blank"

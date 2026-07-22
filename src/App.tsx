@@ -178,7 +178,7 @@ function App() {
         <div className="w-full bg-black overflow-hidden">
 
           <img
-            src="/file_00000000bd407208872d3c30def578c7.png"
+            src="/public/file_00000000573481faacc8d38260eec192.png"
             alt="MD ASGAR Banner"
             className="w-full h-auto object-contain block"
           />

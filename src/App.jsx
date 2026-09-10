@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   Phone,
   Mail,
@@ -7,50 +7,46 @@ import {
   Twitter,
   Youtube,
   ShieldCheck,
-  Recycle,
+  Package,
   ChevronRight,
   MessageCircle,
   MapPin,
-  Package,
-  ArrowUpRight
-} from 'lucide-react';
+  ArrowUpRight,
+  MessageSquare,
+  Globe,
+} from "lucide-react";
 
 const products = [
   {
     id: 1,
     index: "01",
-    name: "Premium Fabric Trolley",
-    image: "/file_0000000012387208a0d377cc39ccf0f8.png",
-    description: "Reinforced fabric shell built for daily wear — strong stitching, modern silhouette, made to last."
+    name: "Trolley Bag Collection",
+    image: "/photos/photo-1.png",
   },
   {
     id: 2,
     index: "02",
-    name: "Executive Travel Bag",
-    image: "/file_000000007ccc720b85830076b29cf37f.png",
-    description: "Elegant, durable luggage designed for business travel and everyday professional use."
+    name: "Travel Bag Collection",
+    image: "/photos/photo-2.png",
   },
   {
     id: 3,
     index: "03",
-    name: "Soft Shell Collection",
-    image: "/file_000000007cdc7208bf2995f04e6521f1.png",
-    description: "Lightweight and spacious, engineered for comfort on long journeys and frequent travel."
+    name: "Premium Luggage",
+    image: "/photos/photo-3.png",
   },
   {
     id: 4,
     index: "04",
-    name: "Urban Travel Series",
-    image: "/file_00000000bab8720bb04e2a6ed7e534f9.png",
-    description: "A stylish trolley built for maximum storage capacity without adding extra weight."
+    name: "4-Wheel Trolley Collection",
+    image: "/photos/photo-4.png",
   },
   {
     id: 5,
     index: "05",
-    name: "Plastic Trolley Collection",
-    image: "/file_00000000cc3072089dd33b05cc0c6e10.png",
-    description: "Impact-resistant plastic trolley bags finished to a premium, retail-ready standard."
-  }
+    name: "Luxury Bags Collection",
+    image: "/photos/photo-5.png",
+  },
 ];
 
 function App() {
@@ -58,280 +54,549 @@ function App() {
   const contactEmail = "Maspak932@gmail.com";
 
   const socialLinks = {
-    instagram: "https://www.instagram.com/funny_joke6114?igsh=MWRvcnloZGdvOWNlcg==",
+    instagram:
+      "https://www.instagram.com/funny_joke6114?igsh=MWRvcnloZGdvOWNlcg==",
     facebook: "https://www.facebook.com/share/18pgTtHLd8/",
-    twitter: "https://x.com/aspak_muha46091",
-    youtube: "https://www.youtube.com/@TheSilent-01"
+    threads: "https://www.threads.com/@asgarluxurybags",
+    twitter: "https://x.com/md_asgar_786",
+    youtube: "https://www.youtube.com/@TheSilent-01",
+    website: "https://asgar-luxury-bags.vercel.app/",
   };
 
-  const whatsappLink = `https://wa.me/${contactNumber}?text=Hello, I am interested in your trolley bag products.`;
+  const whatsappLink =
+    `https://wa.me/${contactNumber}` +
+    `?text=${encodeURIComponent(
+      "Hello, I am interested in your trolley bag products."
+    )}`;
 
   return (
-    <div className="min-h-screen bg-[#0c0c0c] text-white overflow-x-hidden font-sans antialiased">
+    <div className="min-h-screen bg-[#080808] text-white overflow-x-hidden font-sans antialiased">
 
-      {/* ================= NAVBAR ================= */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-xl border-b border-white/10">
-        <div className="max-w-7xl mx-auto px-5 md:px-8 h-20 flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <img
-              src="/file_000000004c787208a3641f9ba0bfc52d.png"
-              alt="MD ASGAR Logo"
-              className="h-11 md:h-13 w-auto object-contain"
-            />
-            <div className="leading-none">
-              <h1 className="text-white text-lg md:text-xl font-bold tracking-tight">
-                MD ASGAR
-              </h1>
-              <p className="text-white/40 text-[10px] md:text-[11px] uppercase tracking-[3px] mt-0.5">
-                Manufacturing
-              </p>
+      {/* ================= HEADER ================= */}
+      <header className="fixed top-0 left-0 right-0 z-50">
+        <nav className="bg-black/80 backdrop-blur-xl border-b border-white/10">
+          <div className="max-w-7xl mx-auto px-5 md:px-8 h-[76px] flex items-center justify-between">
+
+            {/* Brand */}
+            <a href="#" className="flex items-center gap-3">
+              <div className="w-11 h-11 rounded-xl bg-white flex items-center justify-center overflow-hidden">
+                <span className="text-black font-black text-sm">AL</span>
+              </div>
+
+              <div className="leading-none">
+                <div className="font-bold text-lg tracking-tight">
+                  ASGAR
+                </div>
+                <div className="text-[9px] text-white/45 tracking-[3px] uppercase mt-1">
+                  Luxury Bags
+                </div>
+              </div>
+            </a>
+
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex items-center gap-9 text-sm text-white/65">
+              <a href="#" className="hover:text-white transition">
+                Home
+              </a>
+
+              <a href="#collection" className="hover:text-white transition">
+                Collection
+              </a>
+
+              <a href="#about" className="hover:text-white transition">
+                About
+              </a>
+
+              <a href="#wholesale" className="hover:text-white transition">
+                Wholesale
+              </a>
+
+              <a href="#contact" className="hover:text-white transition">
+                Contact
+              </a>
             </div>
-          </div>
 
-          <div className="hidden md:flex items-center gap-10 text-sm font-medium text-white/70">
-            <a href="#collection" className="hover:text-white transition-colors">Collection</a>
-            <a href="#about" className="hover:text-white transition-colors">About</a>
-            <a href="#contact" className="hover:text-white transition-colors">Contact</a>
-          </div>
-
-          <a
-            href={whatsappLink}
-            target="_blank"
-            rel="noreferrer"
-            className="hidden sm:flex items-center gap-2 bg-white text-black text-sm font-semibold px-5 py-2.5 rounded-full hover:bg-yellow-400 transition-colors"
-          >
-            WhatsApp
-            <ArrowUpRight size={16} />
-          </a>
-        </div>
-      </nav>
-
-      {/* ================= HERO ================= */}
-      <header className="relative pt-20">
-        {/* Banner */}
-        <div className="w-full overflow-hidden">
-          <img
-            src="/file_00000000573481faacc8d38260eec192.png"
-            alt="ASGAR Banner"
-            className="w-full h-auto object-contain block"
-          />
-        </div>
-
-        <div className="relative max-w-7xl mx-auto px-5 md:px-8 py-20 md:py-28 text-center">
-          <div className="inline-flex items-center gap-2 border border-white/15 rounded-full px-4 py-1.5 mb-8">
-            <span className="w-1.5 h-1.5 rounded-full bg-yellow-400"></span>
-            <span className="text-xs md:text-sm text-white/60 tracking-wide">
-              Ludhiana · Direct Manufacturer
-            </span>
-          </div>
-
-          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.1] mb-6">
-            Built for the<br />
-            <span className="text-yellow-400">journey ahead.</span>
-          </h2>
-
-          <p className="text-white/50 text-base md:text-xl max-w-2xl mx-auto leading-relaxed mb-12">
-            Premium fabric & plastic trolley bags manufactured by Mohammed Asgar.
-            Designed for retailers, wholesalers and brands who value quality.
-          </p>
-
-          <div className="flex flex-wrap items-center justify-center gap-4">
+            {/* Header CTA */}
             <a
               href={whatsappLink}
               target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-2 bg-yellow-400 hover:bg-yellow-300 text-black font-semibold px-8 py-4 rounded-full transition-all"
+              rel="noopener noreferrer"
+              className="hidden sm:flex items-center gap-2 bg-white text-black px-5 py-2.5 rounded-full text-sm font-semibold hover:bg-yellow-400 transition"
             >
-              Contact on WhatsApp
-              <ChevronRight size={18} />
-            </a>
-            <a
-              href="#collection"
-              className="inline-flex items-center gap-2 border border-white/20 hover:border-white/40 text-white px-8 py-4 rounded-full transition-all"
-            >
-              Explore Collection
+              Get Quote
+              <ArrowUpRight size={16} />
             </a>
           </div>
-        </div>
+        </nav>
       </header>
 
-      {/* ================= FEATURES ================= */}
-      <section className="max-w-7xl mx-auto px-5 md:px-8 py-16 md:py-24">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {[
-            {
-              icon: <ShieldCheck size={28} className="text-yellow-400" />,
-              title: "Premium Quality",
-              desc: "Reinforced construction and premium materials built for real-world travel."
-            },
-            {
-              icon: <Recycle size={28} className="text-emerald-400" />,
-              title: "Responsible Make",
-              desc: "Long-lasting products designed to reduce waste and disposable culture."
-            },
-            {
-              icon: <Package size={28} className="text-sky-400" />,
-              title: "Direct Wholesale",
-              desc: "Factory pricing with no middlemen. Built for bulk and retail buyers."
-            }
-          ].map((item, i) => (
-            <div
-              key={i}
-              className="bg-white/[0.03] border border-white/10 rounded-3xl p-8 hover:bg-white/[0.05] transition-colors"
-            >
-              <div className="mb-5">{item.icon}</div>
-              <h3 className="text-xl font-semibold mb-3">{item.title}</h3>
-              <p className="text-white/50 leading-relaxed text-[15px]">{item.desc}</p>
+      {/* ================= HERO ================= */}
+      <main>
+
+        <section className="relative pt-[76px]">
+          <div className="relative w-full overflow-hidden">
+
+            <img
+              src="/photos/banner.png"
+              alt="ASGAR Luxury Bags"
+              className="w-full h-[430px] sm:h-[520px] md:h-[650px] object-cover block"
+            />
+
+            {/* Dark overlay */}
+            <div className="absolute inset-0 bg-black/35" />
+
+            {/* Hero Content */}
+            <div className="absolute inset-0 flex items-center">
+              <div className="max-w-7xl w-full mx-auto px-5 md:px-8">
+
+                <div className="max-w-2xl">
+
+                  <div className="inline-flex items-center gap-2 border border-white/20 bg-black/25 backdrop-blur-sm rounded-full px-4 py-2 mb-6">
+                    <span className="w-2 h-2 rounded-full bg-yellow-400" />
+                    <span className="text-xs sm:text-sm tracking-wide text-white/80">
+                      Ludhiana · India
+                    </span>
+                  </div>
+
+                  <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold leading-[1.05] tracking-tight">
+                    Premium luggage.
+                    <br />
+                    <span className="text-yellow-400">
+                      Built for business.
+                    </span>
+                  </h1>
+
+                  <p className="mt-6 text-white/75 text-base md:text-lg leading-relaxed max-w-xl">
+                    ASGAR LUXURY BAGS by MD ASGAR MANUFACTURE.
+                    Premium trolley bags for retailers, wholesalers
+                    and business buyers.
+                  </p>
+
+                  <div className="flex flex-wrap gap-3 mt-8">
+
+                    <a
+                      href={whatsappLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 bg-yellow-400 text-black font-semibold px-6 py-3.5 rounded-full hover:bg-yellow-300 transition"
+                    >
+                      WhatsApp Us
+                      <ChevronRight size={18} />
+                    </a>
+
+                    <a
+                      href="#collection"
+                      className="inline-flex items-center gap-2 border border-white/30 bg-black/20 backdrop-blur-sm px-6 py-3.5 rounded-full font-semibold hover:bg-white hover:text-black transition"
+                    >
+                      View Collection
+                    </a>
+
+                  </div>
+                </div>
+              </div>
             </div>
-          ))}
-        </div>
-      </section>
+          </div>
+        </section>
 
-      {/* ================= COLLECTION ================= */}
-      <section id="collection" className="max-w-7xl mx-auto px-5 md:px-8 py-16 md:py-24">
-        <div className="text-center mb-16">
-          <p className="text-yellow-400 text-sm font-medium tracking-[3px] uppercase mb-4">
-            Our Collection
-          </p>
-          <h3 className="text-3xl md:text-5xl font-bold tracking-tight mb-4">
-            Five lines. One standard.
-          </h3>
-          <p className="text-white/50 max-w-xl mx-auto">
-            Every bag is manufactured and quality-checked under the same strict process.
-          </p>
-        </div>
+        {/* ================= TRUST BAR ================= */}
+        <section className="border-y border-white/10 bg-[#0d0d0d]">
+          <div className="max-w-7xl mx-auto px-5 md:px-8 py-7">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7">
-          {products.map((product) => (
-            <div
-              key={product.id}
-              className="group bg-white/[0.03] border border-white/10 rounded-[1.75rem] overflow-hidden hover:border-white/20 transition-all duration-500"
-            >
-              <div className="bg-[#141414] h-[260px] md:h-[300px] p-6 flex items-center justify-center">
-                <img
-                  src={product.image}
-                  alt={product.name}
-                  className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-105"
-                />
+              <div className="flex items-center gap-3">
+                <ShieldCheck className="text-yellow-400" size={24} />
+                <div>
+                  <p className="font-semibold text-sm">
+                    Premium Quality
+                  </p>
+                  <p className="text-xs text-white/40 mt-1">
+                    Quality-focused products
+                  </p>
+                </div>
               </div>
 
-              <div className="p-7">
-                <span className="text-yellow-400/80 text-xs font-mono tracking-widest">
-                  {product.index}
-                </span>
-                <h4 className="text-xl font-semibold mt-2 mb-3">
-                  {product.name}
-                </h4>
-                <p className="text-white/45 text-[14.5px] leading-relaxed mb-7">
-                  {product.description}
+              <div className="flex items-center gap-3">
+                <Package className="text-yellow-400" size={24} />
+                <div>
+                  <p className="font-semibold text-sm">
+                    Wholesale Orders
+                  </p>
+                  <p className="text-xs text-white/40 mt-1">
+                    Business-friendly supply
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-3">
+                <MapPin className="text-yellow-400" size={24} />
+                <div>
+                  <p className="font-semibold text-sm">
+                    Ludhiana, Punjab
+                  </p>
+                  <p className="text-xs text-white/40 mt-1">
+                    Direct manufacturer
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-3">
+                <MessageSquare className="text-yellow-400" size={24} />
+                <div>
+                  <p className="font-semibold text-sm">
+                    Direct Enquiry
+                  </p>
+                  <p className="text-xs text-white/40 mt-1">
+                    Quick business communication
+                  </p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        {/* ================= COLLECTION ================= */}
+        <section
+          id="collection"
+          className="max-w-7xl mx-auto px-5 md:px-8 py-20 md:py-28"
+        >
+
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
+
+            <div>
+              <p className="text-yellow-400 text-xs font-semibold uppercase tracking-[3px] mb-4">
+                Our Collection
+              </p>
+
+              <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
+                Explore our bags
+              </h2>
+            </div>
+
+            <p className="text-white/45 max-w-md leading-relaxed">
+              Discover our range of trolley and travel bags designed
+              for retailers, wholesalers and business buyers.
+            </p>
+
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            {products.map((product) => (
+              <article
+                key={product.id}
+                className="group bg-[#101010] border border-white/10 rounded-3xl overflow-hidden hover:border-yellow-400/30 transition duration-500"
+              >
+
+                <div className="h-[300px] bg-[#151515] flex items-center justify-center p-7 overflow-hidden">
+
+                  <img
+                    src={product.image}
+                    alt={product.name}
+                    className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700"
+                  />
+
+                </div>
+
+                <div className="p-6">
+
+                  <span className="text-yellow-400 text-xs font-mono tracking-widest">
+                    {product.index}
+                  </span>
+
+                  <h3 className="text-xl font-semibold mt-2">
+                    {product.name}
+                  </h3>
+
+                  <p className="text-white/40 text-sm leading-relaxed mt-3">
+                    Premium luggage designed for modern travel
+                    and wholesale business requirements.
+                  </p>
+
+                  <a
+                    href={whatsappLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-6 flex items-center justify-center gap-2 w-full bg-white text-black font-semibold py-3.5 rounded-xl hover:bg-yellow-400 transition"
+                  >
+                    Enquire Now
+                    <ChevronRight size={17} />
+                  </a>
+
+                </div>
+              </article>
+            ))}
+
+          </div>
+        </section>
+
+        {/* ================= WHOLESALE ================= */}
+        <section
+          id="wholesale"
+          className="px-5 md:px-8 py-10 md:py-16"
+        >
+          <div className="max-w-7xl mx-auto rounded-[2rem] border border-white/10 bg-gradient-to-br from-[#181818] to-[#0d0d0d] overflow-hidden">
+
+            <div className="grid md:grid-cols-2">
+
+              <div className="p-8 md:p-14 lg:p-16">
+
+                <p className="text-yellow-400 text-xs font-semibold uppercase tracking-[3px] mb-5">
+                  Wholesale
+                </p>
+
+                <h2 className="text-3xl md:text-5xl font-bold leading-tight">
+                  Built for
+                  <br />
+                  wholesale business.
+                </h2>
+
+                <p className="text-white/45 mt-6 leading-relaxed max-w-lg">
+                  We work with retailers, wholesalers and business
+                  buyers looking for quality luggage with practical
+                  wholesale ordering options.
                 </p>
 
                 <a
                   href={whatsappLink}
                   target="_blank"
-                  rel="noreferrer"
-                  className="flex items-center justify-center gap-2 w-full bg-white text-black font-semibold py-3.5 rounded-2xl hover:bg-yellow-400 transition-colors"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 mt-8 bg-yellow-400 text-black font-semibold px-6 py-3.5 rounded-full hover:bg-yellow-300 transition"
                 >
-                  Enquire Now
-                  <ChevronRight size={17} />
+                  Ask for Wholesale Quote
+                  <ArrowUpRight size={17} />
                 </a>
+
               </div>
+
+              <div className="border-t md:border-t-0 md:border-l border-white/10 p-8 md:p-14 lg:p-16">
+
+                <div className="space-y-6">
+
+                  <div>
+                    <p className="text-white/40 text-sm">
+                      Ludhiana / Punjab
+                    </p>
+                    <p className="text-xl font-semibold mt-1">
+                      Orders starting from 50 pieces
+                    </p>
+                  </div>
+
+                  <div className="h-px bg-white/10" />
+
+                  <div>
+                    <p className="text-white/40 text-sm">
+                      Outside Punjab
+                    </p>
+                    <p className="text-xl font-semibold mt-1">
+                      Minimum 200 pieces
+                    </p>
+                  </div>
+
+                  <div className="h-px bg-white/10" />
+
+                  <div>
+                    <p className="text-white/40 text-sm">
+                      Quantity
+                    </p>
+                    <p className="text-xl font-semibold mt-1">
+                      Better rates on larger quantities
+                    </p>
+                  </div>
+
+                </div>
+              </div>
+
             </div>
-          ))}
-        </div>
-      </section>
+          </div>
+        </section>
 
-      {/* ================= SHOWCASE BANNER ================= */}
-      <section className="px-5 md:px-8 py-10">
-        <div className="max-w-7xl mx-auto rounded-[2rem] overflow-hidden border border-white/10">
-          <img
-            src="/IMG_20260723_145155_841.png"
-            alt="Premium Showcase"
-            className="w-full h-auto object-contain block"
-          />
-        </div>
-      </section>
+        {/* ================= ABOUT ================= */}
+        <section
+          id="about"
+          className="max-w-7xl mx-auto px-5 md:px-8 py-20 md:py-28"
+        >
 
-      {/* ================= ABOUT STRIP ================= */}
-      <section id="about" className="max-w-7xl mx-auto px-5 md:px-8 py-20 md:py-28">
-        <div className="bg-gradient-to-br from-white/[0.04] to-transparent border border-white/10 rounded-[2rem] p-10 md:p-16 text-center">
-          <h3 className="text-3xl md:text-4xl font-bold tracking-tight mb-5">
-            Manufactured in Ludhiana
-          </h3>
-          <p className="text-white/50 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
-            MD ASGAR is a direct manufacturer of premium fabric and plastic trolley bags.
-            We work with retailers, wholesalers and brands across India — delivering consistent
-            quality at factory pricing.
-          </p>
-        </div>
-      </section>
+          <div className="max-w-3xl">
 
-      {/* ================= FOOTER / CONTACT ================= */}
-      <footer id="contact" className="border-t border-white/10 bg-black">
-        <div className="max-w-7xl mx-auto px-5 md:px-8 py-20">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
-            <div>
-              <p className="text-yellow-400 text-sm font-medium tracking-[3px] uppercase mb-4">
-                Contact
-              </p>
-              <h3 className="text-3xl md:text-4xl font-bold tracking-tight mb-6">
-                Let's talk wholesale.
-              </h3>
-              <p className="text-white/45 max-w-md mb-10 leading-relaxed">
-                For pricing, MOQ, samples or custom manufacturing — reach out directly.
-              </p>
+            <p className="text-yellow-400 text-xs font-semibold uppercase tracking-[3px] mb-5">
+              About ASGAR
+            </p>
+
+            <h2 className="text-3xl md:text-5xl font-bold leading-tight">
+              MD ASGAR MANUFACTURE
+              <br />
+              <span className="text-white/45">
+                behind ASGAR LUXURY BAGS.
+              </span>
+            </h2>
+
+            <p className="text-white/50 text-base md:text-lg leading-relaxed mt-7">
+              Based in Ludhiana, Punjab, MD ASGAR MANUFACTURE
+              focuses on luggage and trolley bags for wholesale
+              and business buyers.
+            </p>
+
+          </div>
+
+        </section>
+
+        {/* ================= CONTACT ================= */}
+        <section
+          id="contact"
+          className="border-t border-white/10 bg-[#0d0d0d]"
+        >
+
+          <div className="max-w-7xl mx-auto px-5 md:px-8 py-20 md:py-28">
+
+            <div className="grid md:grid-cols-2 gap-14">
+
+              <div>
+
+                <p className="text-yellow-400 text-xs font-semibold uppercase tracking-[3px] mb-5">
+                  Contact
+                </p>
+
+                <h2 className="text-3xl md:text-5xl font-bold">
+                  Let's talk business.
+                </h2>
+
+                <p className="text-white/45 mt-5 max-w-md leading-relaxed">
+                  Contact us for wholesale enquiries, product
+                  information and business orders.
+                </p>
+
+              </div>
 
               <div className="space-y-3">
+
                 <a
                   href={`tel:${contactNumber}`}
-                  className="flex items-center gap-4 bg-white/[0.03] border border-white/10 rounded-2xl px-5 py-4 hover:border-white/20 transition-colors"
+                  className="flex items-center gap-4 p-5 rounded-2xl border border-white/10 bg-white/[0.02] hover:border-yellow-400/30 transition"
                 >
-                  <Phone size={20} className="text-yellow-400" />
-                  <span className="font-medium">{contactNumber}</span>
+                  <Phone className="text-yellow-400" size={21} />
+                  <span>{contactNumber}</span>
                 </a>
 
                 <a
                   href={`mailto:${contactEmail}`}
-                  className="flex items-center gap-4 bg-white/[0.03] border border-white/10 rounded-2xl px-5 py-4 hover:border-white/20 transition-colors"
+                  className="flex items-center gap-4 p-5 rounded-2xl border border-white/10 bg-white/[0.02] hover:border-yellow-400/30 transition"
                 >
-                  <Mail size={20} className="text-yellow-400" />
-                  <span className="font-medium">{contactEmail}</span>
+                  <Mail className="text-yellow-400" size={21} />
+                  <span>{contactEmail}</span>
                 </a>
 
-                <div className="flex items-center gap-4 bg-white/[0.03] border border-white/10 rounded-2xl px-5 py-4">
-                  <MapPin size={20} className="text-yellow-400" />
-                  <span className="font-medium">Ludhiana, Punjab</span>
+                <div className="flex items-center gap-4 p-5 rounded-2xl border border-white/10 bg-white/[0.02]">
+                  <MapPin className="text-yellow-400" size={21} />
+                  <span>Ludhiana, Punjab, India</span>
                 </div>
-              </div>
-            </div>
 
-            <div className="flex flex-col justify-between items-start md:items-end">
-              <div className="flex gap-5">
-                {[
-                  { href: socialLinks.instagram, Icon: Instagram },
-                  { href: socialLinks.facebook, Icon: Facebook },
-                  { href: socialLinks.twitter, Icon: Twitter },
-                  { href: socialLinks.youtube, Icon: Youtube }
-                ].map(({ href, Icon }, i) => (
-                  <a
-                    key={i}
-                    href={href}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="w-11 h-11 rounded-full border border-white/15 flex items-center justify-center text-white/60 hover:text-white hover:border-white/40 transition-all"
-                  >
-                    <Icon size={18} />
-                  </a>
-                ))}
               </div>
 
-              <div className="mt-12 md:mt-0 text-left md:text-right">
-                <p className="text-white font-semibold text-lg">MD ASGAR</p>
-                <p className="text-white/40 text-sm mt-1">Manufactured by Mohammed Asgar</p>
-                <p className="text-white/25 text-sm mt-4">© 2026 All Rights Reserved</p>
-              </div>
             </div>
           </div>
+        </section>
+
+      </main>
+
+      {/* ================= FOOTER ================= */}
+      <footer className="border-t border-white/10 bg-black">
+
+        <div className="max-w-7xl mx-auto px-5 md:px-8 py-14">
+
+          <div className="flex flex-col md:flex-row justify-between gap-10">
+
+            <div>
+
+              <h3 className="font-bold text-xl">
+                ASGAR LUXURY BAGS
+              </h3>
+
+              <p className="text-white/35 text-sm mt-2">
+                Manufactured by MD ASGAR MANUFACTURE
+              </p>
+
+            </div>
+
+            {/* Social Media */}
+            <div>
+
+              <p className="text-white/40 text-xs uppercase tracking-[2px] mb-4">
+                Connect With Us
+              </p>
+
+              <div className="flex flex-wrap gap-3">
+
+                <a
+                  href={socialLinks.instagram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Instagram"
+                  className="w-11 h-11 rounded-full border border-white/15 flex items-center justify-center hover:bg-white hover:text-black transition"
+                >
+                  <Instagram size={18} />
+                </a>
+
+                <a
+                  href={socialLinks.facebook}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Facebook"
+                  className="w-11 h-11 rounded-full border border-white/15 flex items-center justify-center hover:bg-white hover:text-black transition"
+                >
+                  <Facebook size={18} />
+                </a>
+
+                <a
+                  href={socialLinks.threads}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Threads"
+                  className="w-11 h-11 rounded-full border border-white/15 flex items-center justify-center hover:bg-white hover:text-black transition"
+                >
+                  <AtSignIcon />
+                </a>
+
+                <a
+                  href={socialLinks.twitter}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="X"
+                  className="w-11 h-11 rounded-full border border-white/15 flex items-center justify-center hover:bg-white hover:text-black transition"
+                >
+                  <Twitter size={18} />
+                </a>
+
+                <a
+                  href={socialLinks.youtube}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="YouTube"
+                  className="w-11 h-11 rounded-full border border-white/15 flex items-center justify-center hover:bg-white hover:text-black transition"
+                >
+                  <Youtube size={18} />
+                </a>
+
+                <a
+                  href={socialLinks.website}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Website"
+                  className="w-11 h-11 rounded-full border border-white/15 flex items-center justify-center hover:bg-white hover:text-black transition"
+                >
+                  <Globe size={18} />
+                </a>
+
+              </div>
+            </div>
+
+          </div>
+
+          <div className="border-t border-white/10 mt-10 pt-6 flex flex-col sm:flex-row justify-between gap-3 text-xs text-white/25">
+            <span>© 2026 ASGAR LUXURY BAGS</span>
+            <span>MD ASGAR MANUFACTURE · Ludhiana, Punjab</span>
+          </div>
+
         </div>
       </footer>
 
@@ -339,13 +604,23 @@ function App() {
       <a
         href={whatsappLink}
         target="_blank"
-        rel="noreferrer"
-        className="fixed bottom-6 right-6 z-50 w-14 h-14 bg-green-500 hover:bg-green-400 rounded-full flex items-center justify-center shadow-2xl shadow-green-500/30 transition-all hover:scale-110"
-        aria-label="WhatsApp"
+        rel="noopener noreferrer"
+        aria-label="Chat on WhatsApp"
+        className="fixed bottom-5 right-5 z-50 w-14 h-14 rounded-full bg-green-500 flex items-center justify-center shadow-xl hover:scale-105 transition"
       >
-        <MessageCircle size={26} className="text-white" />
+        <MessageCircle size={27} />
       </a>
+
     </div>
+  );
+}
+
+/* Simple Threads-style icon */
+function AtSignIcon() {
+  return (
+    <span className="text-sm font-bold">
+      @
+    </span>
   );
 }
 

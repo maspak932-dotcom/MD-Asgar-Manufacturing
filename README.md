@@ -1,20 +1,16 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# ASGAR LUXURY BAGS
 
-# Run and deploy your AI Studio app
+Premium wholesale and manufacturer website for **MD ASGAR MANUFACTURE**, Ludhiana, Punjab, India.
 
-This contains everything you need to run your app locally.
+## Website
 
-View your app in AI Studio: https://ai.studio/apps/b874612e-d980-4890-8ee8-4f65727d56ee
+https://asgar-luxury-bags.vercel.app/
 
 ## Run Locally
 
-**Prerequisites:**  Node.js
+**Prerequisites:** Node.js
 
+### 1. Install dependencies
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+```bash
+npm install
